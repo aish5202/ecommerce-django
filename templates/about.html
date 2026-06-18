@@ -1,24 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>About Us - E-Commerce Platform</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-    <h1>About Us</h1>
+{% block title %}
+    About Us
+{% endblock %}
 
-    <a href="{% url 'home' %}">Home</a> |
-    <a href="{% url 'about' %}">About</a> |
-    <a href="{% url 'contact' %}">Contact</a> |
-    <a href="{% url 'login' %}">Login</a>
-  
+{% block content %}
 
-    <hr>
     {% if number > 10 %}
-        <h2>Positive</h2>
+        <h3>Positive</h3>
     {% endif %}
-    
+
     <h2>Who We Are</h2>
+
     <p>
         Welcome to E-Commerce Platform. We provide quality products
         at affordable prices and aim to deliver the best shopping
@@ -26,24 +19,19 @@
     </p>
 
     <h2>Our Mission</h2>
+
     <p>
-        Our mission is to make online shopping easy, secure, and
-        convenient for everyone.
+        Our mission is to make online shopping easy, secure,
+        and convenient for everyone.
     </p>
 
     <h2>Why Choose Us?</h2>
+
     <ul>
-        <li>Wide range of products</li>
-        <li>Affordable prices</li>
-        <li>Fast delivery</li>
-        <li>Secure payments</li>
+        <li>Wide Range of Products</li>
+        <li>Affordable Prices</li>
+        <li>Fast Delivery</li>
+        <li>Secure Payments</li>
     </ul>
 
-    <hr>
-
-    <footer>
-        <p>&copy; 2026 E-Commerce Platform. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 def home(request):
 
@@ -13,4 +13,10 @@ def contact(request):
     return render(request, 'contact.html')
 
 def login(request):
+    if request.method == "POST":
+        email = request.POST['email']
+        password = request.POST['password']
+
+        if email == "admin@gmail.com" and password == "1234":
+            return redirect('home')
     return render(request, 'login.html')
