@@ -1,34 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>E-Commerce Platform</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-    <h1>E-Commerce Platform</h1>
+{% block title %}
+    Home
+{% endblock %}
 
-    <a href="{% url 'home' %}">Home</a> |
-    <a href="{% url 'about' %}">About</a> |
-    <a href="{% url 'contact' %}">Contact</a> |
-    <a href="{% url 'login' %}">Login</a>
-
-    <hr>
+{% block content %}
 
     <h2>Welcome to Our Store</h2>
-    <p>Discover amazing products at affordable prices.</p>
+
+    <p>
+        Discover amazing products at affordable prices.
+        Shop from a wide range of electronics, fashion, and accessories.
+    </p>
 
     <h3>Featured Products</h3>
+
     <ul>
         <li>Laptop</li>
         <li>Smartphone</li>
         <li>Headphones</li>
+        <li>Smart Watch</li>
+        <li>Bluetooth Speaker</li>
     </ul>
 
-    <hr>
-
-    <footer>
-        <p>&copy; 2026 E-Commerce Platform. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+{% endblock %}
